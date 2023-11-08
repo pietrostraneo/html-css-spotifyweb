@@ -6,27 +6,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 <body>
 
-    <!------ USER INTERFACE ------>
+    <!----------------------------------------------- USER INTERFACE ----------------------------------------------------->
 
     <div id="ui">
 
         <div class="ui-content">
             
-            <div id="sidebar"></div>
+            <div id="sidebar">
+                
+                <div class="side-content">
+
+                    <!-- LOGO -->
+                    <div class="logo">
+                        <img src="./img/logo.svg" alt="Spotify">
+                    </div>
+
+                    <!-- NAV -->
+                    <nav>
+                        <ul>
+                            <a href="#"><li><img src="./img/home.svg" alt="gohome">Home</li></a>
+                            <a href="#"><li><img src="./img/search.svg" alt="search">Cerca</li></a>
+                            <a href="#"><li><img src="./img/libreria.svg" alt="library">La tua libreria</li></a>
+                        </ul>
+                    </nav>
+
+                    <!-- PLAYLISTS -->
+                    <div class="playlist dflex gap10">
+                        <h4>PLAYLIST</h4>
+                        <ul class="dflex gap20">
+                            <a href="#"><li><div class="add"><i class="fas fa-plus"></i></div>Crea Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                            <a href="#"><li>Nome Playlist</li></a>
+                        </ul>
+                    </div>
+
+                    <!-- USER -->
+                    <div class="user">
+
+                        <div class="install">
+                            <a href="#"><img src="./img/download.svg" alt="download"> Installa app</a>
+                        </div>  
+                        <hr>
+                        <div class="profile">
+                            <a href="#"><img src="./img/profile.svg" alt="userimg"><h4>John Doe</h4></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
             <div class="content">
 
+                <!-- HEADER - UPGRADE BUTTON -->
                 <header>
                     <button id="upgrade">EFFETTUA UN UPGRADE</button>
                 </header>
 
+                <!-- MUSIC LIBRARY -->
                 <div class="library">
 
                     <div class="container">
 
+                        <!-- RECENTLY PLAYED -->
                         <div class="row dflex wrap gap20">
                             
                             <div class="col100 bgred height75"></div>
@@ -42,6 +94,7 @@
 
                         </div>
 
+                        <!-- CREATED FOR: USERNAME -->
                         <div class="row dflex wrap gap20 margin-y-50">
 
                             <div class="col100"><h2>IPSUM</h2></div>
@@ -50,6 +103,7 @@
 
                         </div>
 
+                        <!-- MOST POPULAR ARTISTS -->
                         <div class="row dflex wrap gap20 margin-y-50">
 
                             <div class="col100"><h2>DOLOR</h2></div>
@@ -68,9 +122,27 @@
         
     </div>
 
-    <!------ MUSIC PLAYER ------>
+    <!--------------------------------------------- MUSIC PLAYER ---------------------------------------------->
 
-    <div id="player"></div>
+    <div id="player">
+
+        <div class="container height100">
+
+            <div class="row height100">
+
+                <div class="player-elements dflex gap10 height100">
+
+                    <div class="col25 bgred height75"></div>
+                    <div class="col50 bgred height75"></div>
+                    <div class="col25 bgred height75"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

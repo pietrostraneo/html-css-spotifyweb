@@ -14,7 +14,15 @@
     height: 75px;
 }
 
+.height100{
+    height: 100%;
+}
+
 /* UTILITY */
+
+img{
+    width: 100%;
+}
 
 #ui{
     height: calc(100vh - 100px);
@@ -35,6 +43,7 @@
 #sidebar{
     background-color: black;
     width: 200px;
+    height: 100%;
 }
 
 .content{
@@ -44,7 +53,7 @@
 
 header{
     height: 80px;
-    width: 100%;
+    width: calc(100vw - 200px);
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -57,7 +66,7 @@ header{
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid white;
-    width: 25%;
+    margin-right: 50px;
 }
 
 .container{
@@ -76,8 +85,16 @@ header{
     gap: 20px;
 }
 
+.gap10{
+    gap: 10px;
+}
+
 .margin-y-50{
     margin-top: 50px;
+}
+
+a:hover{
+    color: white;
 }
 
 /* COLUMNS */
@@ -90,7 +107,109 @@ header{
     width: calc(100% / 6 - 20px);
 }
 
-/* MUSIC LIBRARY */
+.col25{
+    width: calc(25% - 10px);
+}
+
+.col50{
+    width: calc(50% - 10px);
+}
+
+/****** SIDEBAR ******/
+
+.side-content{
+    padding: 20px;
+}
+
+/* NAV */
+
+nav{
+    margin: 20px auto;
+}
+
+nav a, .playlist a{
+    text-decoration: none;
+    color: #6F6F6F;
+}
+
+nav ul, .playlist ul{
+    list-style-type: none;
+}
+
+nav li{
+    margin-top: 15px;
+}
+
+nav img{
+    width: 20%;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.logo{
+    width: 75%;
+}
+
+/* PLAYLISTS */
+
+.playlist{
+    flex-direction: column;
+    margin-top: 40px;
+    overflow-y: auto;
+    max-height: 390px;
+}
+
+.playlist h4{
+    color: white;
+}
+
+.playlist ul{
+    flex-direction: column;
+}
+
+.add{
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    background-color: #6F6F6F;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-plus{
+    font-size: 25px;
+}
+
+/* USER */
+
+.install img{
+    width: 10px;
+}
+
+.install{
+    color: #6F6F6F;
+}
+
+.user hr{
+    color: white;
+}
+
+.profile img{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.profile h4{
+    color: white;
+    display: inline;
+}
+
+/****** MUSIC LIBRARY ******/
 
 .library{
     margin-top: 80px;
@@ -99,4 +218,12 @@ header{
 
 h2{
     color: white;
+}
+
+/****** PLAYER ******/
+
+.player-elements{
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
