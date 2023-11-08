@@ -47,6 +47,17 @@ header{
     width: 100%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#upgrade{
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    width: 25%;
 }
 
 .container{
