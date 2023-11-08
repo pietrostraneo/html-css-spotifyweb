@@ -3,3 +3,73 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* LAYOUT TEST */
+
+.bgred{
+    background-color: red;
+}
+
+.height75{
+    height: 75px;
+}
+
+/* UTILITY */
+
+#ui{
+    height: calc(100vh - 100px);
+    background-color: #141922;
+}
+
+#player{
+    height: 100px;
+    background-color: #282828;
+}
+
+.ui-content{
+    display: flex;
+    background-color: #141922;
+    height: 100%;
+}
+
+#sidebar{
+    background-color: black;
+    width: 200px;
+}
+
+.content{
+    width: calc(100vw - 200px);
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container{
+    width: 100%;
+}
+
+.dflex{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.gap20{
+    gap: 20px;
+}
+
+/* COLUMNS */
+
+.col100{
+    width: calc(100% - 20px);
+}
+
+.col16{
+    width: calc(100% / 6 - 20px);
+}
