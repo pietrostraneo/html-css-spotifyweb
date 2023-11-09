@@ -111,7 +111,7 @@ header{
     margin-top: 50px;
 }
 
-a:hover{
+a:hover, nav p:hover, .install p:hover{
     color: white;
 }
 
