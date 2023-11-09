@@ -77,7 +77,7 @@ header{
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid white;
-    margin-right: 50px;
+    margin-right: 25px;
     border-radius: 50px;
     cursor: pointer;
     transition: transform .2s;
@@ -134,12 +134,17 @@ ul{
     width: calc(100% - 20px);
 }
 
-.col16,
-.col25,
-.col50{
-    width: calc(100% / 2 - 20px);
+.col16{
+    width: calc(100% / 6 - 20px);
 }
 
+.col25{
+    width: calc(25% - 10px);
+}
+
+.col50{
+    width: calc(50% - 10px);
+}
 /****** SIDEBAR ******/
 
 .side-content-top{
@@ -182,6 +187,11 @@ nav img{
 .logo{
     width: 75%;
     padding: 20px;
+    margin: 0 auto;
+}
+
+#logo-sm{
+    display: none;
 }
 
 /* PLAYLISTS */
@@ -237,6 +247,10 @@ nav img{
     color: white;
 }
 
+.user p{
+    display: inline;
+}
+
 .profile img{
     width: 30px;
     border: 1px solid white;
@@ -268,6 +282,10 @@ h2, h3{
 .listnav{
     color: #6F6F6F;
     display: flex;
+    justify-content: center;
+}
+
+.listnav ul{
     justify-content: center;
 }
 
@@ -510,14 +528,84 @@ h2, h3{
   }
 /****** MEDIA QUERY ******/
 
-@media screen and (min-width: 768px){
-    .col25{
-        width: calc(25% - 20px);
+@media screen and (max-width: 992px){
+
+    .col16{
+        width: calc(100% / 4 - 20px);
     }
+
+    .minialbum{
+        width: 50%;
+    }
+
 }
 
-@media screen and (min-width: 991px){
+@media screen and (max-width: 576px){
+    
     .col16{
-        width: calc(100% / 6 - 20px);
+        width: calc(100% / 2 - 20px);
+    }
+
+    #sidebar{
+        width: 50px;
+    }
+
+    #logo-sm{
+        display: block;
+    }
+
+    #logo-xl{
+        display: none;
+    }
+
+    .logo{
+        width: 65%;
+        padding: 0;
+    }
+
+    nav p{
+        display: none;
+    }
+
+    .playlist{
+        display: none;
+    }
+
+    .content{
+        width: calc(100vw - 50px);
+    }
+
+    header{
+        width: calc(100vw - 50px);
+    }
+
+    nav img{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .user h4{
+        display: none;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .user p{
+        display: none;
+    }
+
+    .profile img{
+        margin-right: 0;
+        margin: 10px auto;
+    }
+
+    .side-content-bottom{
+        padding: 0;
+    }
+
+    .install img{
+        display: none;
     }
 }
