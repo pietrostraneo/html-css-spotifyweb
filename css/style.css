@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* LAYOUT TEST */
@@ -66,6 +69,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 #upgrade{
@@ -74,6 +78,13 @@ header{
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid white;
     margin-right: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+#upgrade:hover{
+    transform: scale(1.2);
 }
 
 .container{
@@ -109,36 +120,38 @@ a{
     color: #6F6F6F;
 }
 
-h3{
-    color: white;
+p{
+    color: #6F6F6F;
 }
+
+ul{
+    list-style-type: none;
+}
+
 /* COLUMNS */
 
 .col100{
     width: calc(100% - 20px);
 }
 
-.col16{
-    width: calc(100% / 6 - 20px);
-}
-
-.col25{
-    width: calc(25% - 10px);
-}
-
+.col16,
+.col25,
 .col50{
-    width: calc(50% - 10px);
+    width: calc(100% / 2 - 20px);
 }
 
 /****** SIDEBAR ******/
 
 .side-content-top{
-    padding: 20px;
-    height: 80%;
+    height: 90%;
     overflow: hidden;
 }
 .side-content-bottom{
     padding: 20px;
+}
+
+hr{
+    margin: 10px auto;
 }
 
 /* NAV */
@@ -147,21 +160,14 @@ nav{
     margin: 20px auto;
 }
 
-nav a{
-    margin-left: 10px;
-}
-
-nav a, .playlist a{
-    text-decoration: none;
-    color: #6F6F6F;
-}
-
-nav ul, .playlist ul{
-    list-style-type: none;
-}
-
 nav li{
     margin-top: 15px;
+}
+
+nav a{
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 nav li:first-child, nav li:hover{
@@ -169,22 +175,20 @@ nav li:first-child, nav li:hover{
 }
 
 nav img{
-    width: 20%;
-}
-
-.logo img{
-    width: 100%;
+    width: 15%;
+    margin-right: 10px;
 }
 
 .logo{
     width: 75%;
+    padding: 20px;
 }
 
 /* PLAYLISTS */
 
 .playlist{
     flex-direction: column;
-    margin-top: 40px;
+    padding: 20px;
 }
 
 .playlist h4{
@@ -192,9 +196,12 @@ nav img{
 }
 
 .playlist ul{
-    flex-direction: column;
-    height: 75%;
+    height: 30vh;
     overflow-y: auto;
+}
+
+.playlist li{
+    margin: 10px auto;
 }
 
 .add{
@@ -209,7 +216,11 @@ nav img{
 }
 
 .fa-plus{
-    font-size: 25px;
+    font-size: 20px;
+    background-color: #6F6F6F;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 /* USER */
@@ -230,11 +241,17 @@ nav img{
     width: 30px;
     border: 1px solid white;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .profile h4{
     color: white;
     display: inline;
+}
+
+.profile a{
+    display: flex;
+    align-items: center;
 }
 
 /****** MUSIC LIBRARY ******/
@@ -244,7 +261,7 @@ nav img{
     padding: 35px;
 }
 
-h2{
+h2, h3{
     color: white;
 }
 
@@ -252,10 +269,6 @@ h2{
     color: #6F6F6F;
     display: flex;
     justify-content: center;
-}
-
-.listnav ul{
-    list-style-type: none;
 }
 
 .listnav li:first-child, .listnav li:hover{
@@ -266,7 +279,7 @@ h2{
 .overlay{
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -274,16 +287,27 @@ h2{
     display: none;
 }
 
+.popular .overlay{
+    border-radius: 50%;
+}
+
 .album:hover .overlay{
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .album{
     width: 100%;
+    position: relative;
 }
 
 .song{
     text-align: center;
+}
+
+.popular img{
+    border-radius: 50%;
 }
 
 /****** PLAYER ******/
@@ -309,13 +333,13 @@ h2{
     color: white
 }
 
-.miniplayer p{
-    color: #6F6F6F;
-}
-
 .fa-heart, .fa-folder{
     color: white;
     margin: auto 5px;
+}
+
+.fa-heart:hover{
+    color: red;
 }
 
 /* PLAYER INPUTS */
@@ -397,8 +421,8 @@ h2{
     margin: auto 20px;
 }
 
-.buttons i:hover{
-    color: green;
+.buttons i:hover, .fa-folder:hover, .volume i:hover, .overlay i:hover{
+    color: lightgreen;
 }
 
 .fa-play{
@@ -406,6 +430,10 @@ h2{
     border-radius: 50%;
     padding: 0.5rem;
     font-size: 1rem;
+}
+
+.fa-play:hover, .overlay .fa-play:hover{
+    border: 3px solid lightgreen;
 }
 
 /*********** Baseline, reset styles ***********/
@@ -481,18 +509,14 @@ h2{
   }
 /****** MEDIA QUERY ******/
 
-@media and screen (max-width: ){
-    
+@media screen and (min-width: 768px){
+    .col25{
+        width: calc(25% - 20px);
+    }
 }
 
-@media and screen (max-width: ){
-
-}
-
-@media and screen (max-width: ){
-
-}
-
-@media and screen (max-width: ){
-
+@media screen and (min-width: 991px){
+    .col16{
+        width: calc(100% / 6 - 20px);
+    }
 }
