@@ -12,3 +12,5 @@ Consigli:
 
 3. Come non mai, in questi giorni di esercizio lungo vale la prima regola del BoolFight Club: se avete difficoltà o dubbi, aprite ticket:
 Buon Lavoro!
+
+Ho consegnato l'esercizio, però la versione sm delle media query ha un problema nel player in basso, tutti gli elementi si sovrappongono e non sono stato in grado di risolvere il problema
